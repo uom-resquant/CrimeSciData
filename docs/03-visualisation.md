@@ -478,13 +478,6 @@ We can now use this new variable to illustrate the use of the `ggridge` package.
 
 ```r
 library(ggridges)
-```
-
-```
-## Warning: package 'ggridges' was built under R version 4.3.2
-```
-
-```r
 ggplot(Boston, aes(x = log10(crim + 1), y = as.factor(dec_medv))) + geom_density_ridges()
 ```
 
@@ -788,13 +781,6 @@ Then we load `ggpairs` and use run the scatterplot matrix using the `ggpairs` fu
 
 ```r
 library(GGally)
-```
-
-```
-## Warning: package 'GGally' was built under R version 4.3.2
-```
-
-```r
 ggpairs(Boston_spm)
 ```
 
@@ -868,13 +854,6 @@ As we said earlier `ggthemes` gives you additional themes you could use. So, for
 
 ```r
 library(ggthemes)
-```
-
-```
-## Warning: package 'ggthemes' was built under R version 4.3.2
-```
-
-```r
 ggplot(Boston, aes(x = medv, y = crim, colour = as.factor(chas))) +
   geom_point() +
   ggtitle("Fig 1.Crime, Property Value and River Proximity of Boston Towns") +

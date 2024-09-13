@@ -327,11 +327,13 @@ As we said one of the fundamental assumptions of regression is that the model as
 ```
 
 ```
-## Warning: Removed 3664 rows containing non-finite values (`stat_smooth()`).
+## Warning: Removed 3664 rows containing non-finite outside the scale range
+## (`stat_smooth()`).
 ```
 
 ```
-## Warning: Removed 3664 rows containing non-finite values (`stat_summary()`).
+## Warning: Removed 3664 rows containing non-finite outside the scale range
+## (`stat_summary()`).
 ```
 
 ```
@@ -339,7 +341,8 @@ As we said one of the fundamental assumptions of regression is that the model as
 ```
 
 ```
-## Warning: Removed 3664 rows containing missing values (`geom_point()`).
+## Warning: Removed 3664 rows containing missing values or values outside the scale range
+## (`geom_point()`).
 ```
 
 <img src="09-regression2_files/figure-html/unnamed-chunk-11-1.png" width="672" />
@@ -362,7 +365,8 @@ ggplot(data = BCS0708, aes(x = tcarea, y = tcviolent)) +
 ```
 
 ```
-## Warning: Removed 3664 rows containing non-finite values (`stat_smooth()`).
+## Warning: Removed 3664 rows containing non-finite outside the scale range
+## (`stat_smooth()`).
 ```
 
 ```
@@ -370,11 +374,13 @@ ggplot(data = BCS0708, aes(x = tcarea, y = tcviolent)) +
 ```
 
 ```
-## Warning: Removed 3664 rows containing non-finite values (`stat_smooth()`).
+## Warning: Removed 3664 rows containing non-finite outside the scale range
+## (`stat_smooth()`).
 ```
 
 ```
-## Warning: Removed 3664 rows containing missing values (`geom_point()`).
+## Warning: Removed 3664 rows containing missing values or values outside the scale range
+## (`geom_point()`).
 ```
 
 <img src="09-regression2_files/figure-html/unnamed-chunk-12-1.png" width="672" />
@@ -397,7 +403,8 @@ ggplot(data = BCS0708, aes(x = tcarea, y = tcviolent)) +
 ```
 
 ```
-## Warning: Removed 3664 rows containing non-finite values (`stat_smooth()`).
+## Warning: Removed 3664 rows containing non-finite outside the scale range
+## (`stat_smooth()`).
 ```
 
 ```
@@ -405,11 +412,13 @@ ggplot(data = BCS0708, aes(x = tcarea, y = tcviolent)) +
 ```
 
 ```
-## Warning: Removed 3664 rows containing non-finite values (`stat_smooth()`).
+## Warning: Removed 3664 rows containing non-finite outside the scale range
+## (`stat_smooth()`).
 ```
 
 ```
-## Warning: Removed 3664 rows containing missing values (`geom_point()`).
+## Warning: Removed 3664 rows containing missing values or values outside the scale range
+## (`geom_point()`).
 ```
 
 <img src="09-regression2_files/figure-html/unnamed-chunk-13-1.png" width="672" />
@@ -505,7 +514,7 @@ residualPlots(fit_3q)
 
 ```
 ##             Test stat Pr(>|Test stat|)  
-## tcarea        -0.3529          0.72420  
+## tcarea        -0.2001          0.84138  
 ## I(tcarea^2)    1.8972          0.05783 .
 ## sex                                     
 ## Tukey test     1.2223          0.22159  
@@ -522,7 +531,7 @@ residualPlots(fit_3q, plot = FALSE) #Setting the plot argument to false will onl
 
 ```
 ##             Test stat Pr(>|Test stat|)  
-## tcarea        -0.3529          0.72420  
+## tcarea        -0.2001          0.84138  
 ## I(tcarea^2)    1.8972          0.05783 .
 ## sex                                     
 ## Tukey test     1.2223          0.22159  
@@ -612,11 +621,11 @@ library(arm, quietly = TRUE)
 
 ```
 ## 
-## arm (Version 1.13-1, built: 2022-8-25)
+## arm (Version 1.14-4, built: 2024-4-1)
 ```
 
 ```
-## Working directory is /Users/eonkim/Desktop/R/CrimeSciData
+## Working directory is /Users/user/Desktop/resquant/CrimeSciData
 ```
 
 ```
@@ -729,7 +738,7 @@ residualPlots(fit_B1)
 ## medv          9.8302        < 2.2e-16 ***
 ## lstat         4.8810        1.422e-06 ***
 ## dis           5.7387        1.655e-08 ***
-## chas          0.3195           0.7495    
+## chas          0.3899           0.6968    
 ## Tukey test   10.2705        < 2.2e-16 ***
 ## ---
 ## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
@@ -841,7 +850,7 @@ residualPlots(fit_B2)
 ## medv          8.0190        7.613e-15 ***
 ## lstat         0.4771           0.6335    
 ## dis           7.7327        5.838e-14 ***
-## chas          0.2330           0.8158    
+## chas          0.2937           0.7691    
 ## Tukey test    6.0272        1.668e-09 ***
 ## ---
 ## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
@@ -918,7 +927,7 @@ residualPlots(fit_B3)
 ## poly(medv, 2)                             
 ## log(lstat)       0.5714          0.56801  
 ## log(dis)         1.9410          0.05282 .
-## chas             0.3017          0.76303  
+## chas             0.2092          0.83441  
 ## Tukey test       1.1169          0.26402  
 ## ---
 ## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
@@ -963,13 +972,13 @@ summary(fit_B3_boot)
 ```
 ## 
 ## Number of bootstrap replications R = 999 
-##                 original   bootBias  bootSE   bootMed
-## (Intercept)      1.12062 -0.0284487 0.56351   1.08582
-## poly(medv, 2)1 -11.90029  0.0049833 2.52068 -11.93234
-## poly(medv, 2)2  10.86169  0.0200165 1.65795  10.83312
-## log(lstat)       0.25564  0.0058147 0.19959   0.26356
-## log(dis)        -2.11930  0.0123777 0.12965  -2.10856
-## chas             0.15374  0.0142662 0.20856   0.16826
+##                 original    bootBias  bootSE   bootMed
+## (Intercept)      1.12062 -0.00560562 0.53551   1.14735
+## poly(medv, 2)1 -11.90029 -0.07888981 2.31795 -11.97874
+## poly(medv, 2)2  10.86169  0.02739211 1.55690  10.84416
+## log(lstat)       0.25564  0.00014854 0.18847   0.25026
+## log(dis)        -2.11930  0.00323362 0.13015  -2.11752
+## chas             0.15374  0.00631613 0.20217   0.16223
 ```
 
 The summary gives the original sample value for each component of the bootstrapped statistics, along with the bootstrap estimates of bias, the difference between the average bootstrapped
@@ -986,12 +995,12 @@ confint(fit_B3_boot)
 ## Bootstrap bca confidence intervals
 ## 
 ##                       2.5 %     97.5 %
-## (Intercept)      0.02652647  2.2237512
-## poly(medv, 2)1 -16.61233078 -6.5910023
-## poly(medv, 2)2   7.67246256 14.2249320
-## log(lstat)      -0.13805528  0.6703103
-## log(dis)        -2.37511227 -1.8684148
-## chas            -0.26043845  0.5737351
+## (Intercept)     -0.04063901  2.0838078
+## poly(medv, 2)1 -16.48989573 -7.2687058
+## poly(medv, 2)2   7.68185900 13.8758911
+## log(lstat)      -0.10251190  0.6301852
+## log(dis)        -2.36792377 -1.8555584
+## chas            -0.25770341  0.5326634
 ```
 
 ## Multicollinearity

@@ -209,15 +209,15 @@ library(lessR, quietly= TRUE)
 
 ```
 ## 
-## lessR 4.3.0                         feedback: gerbing@pdx.edu 
+## lessR 4.3.7                         feedback: gerbing@pdx.edu 
 ## --------------------------------------------------------------
 ## > d <- Read("")   Read text, Excel, SPSS, SAS, or R data file
 ##   d is default data frame, data= in analysis routines optional
 ## 
-## Learn about reading, writing, and manipulating data, graphics,
-## testing means and proportions, regression, factor analysis,
+## Many examples of reading, writing, and manipulating data, 
+## graphics, testing means and proportions, regression, factor analysis,
 ## customization, and descriptive statistics from pivot tables
-##   Enter:  browseVignettes("lessR")
+##   Go to:  https://web.pdx.edu/~gerbing/lessR/examples
 ## 
 ## View changes in this and recent versions of lessR
 ##   Enter: news(package="lessR")
@@ -315,11 +315,11 @@ library(arm)
 
 ```
 ## 
-## arm (Version 1.13-1, built: 2022-8-25)
+## arm (Version 1.14-4, built: 2024-4-1)
 ```
 
 ```
-## Working directory is /Users/eonkim/Desktop/R/CrimeSciData
+## Working directory is /Users/user/Desktop/resquant/CrimeSciData
 ```
 
 ```

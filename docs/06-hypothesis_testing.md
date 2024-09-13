@@ -266,7 +266,8 @@ ggplot(BCS0708, aes(ethgrp2, tcviolent, fill=ethgrp2)) +
 ```
 
 ```
-## Warning: Removed 3242 rows containing non-finite values (`stat_boxplot()`).
+## Warning: Removed 3242 rows containing non-finite outside the scale range
+## (`stat_boxplot()`).
 ```
 
 <img src="06-hypothesis_testing_files/figure-html/unnamed-chunk-7-1.png" width="672" />
@@ -513,7 +514,8 @@ ggplot(BCS0708, aes(x = tcviolent)) +
 ```
 
 ```
-## Warning: Removed 3242 rows containing non-finite values (`stat_density()`).
+## Warning: Removed 3242 rows containing non-finite outside the scale range
+## (`stat_density()`).
 ```
 
 <img src="06-hypothesis_testing_files/figure-html/unnamed-chunk-19-1.png" width="672" />
@@ -534,7 +536,8 @@ ggplot(BCS0708, aes(x = ptcviolent)) +
 ```
 
 ```
-## Warning: Removed 3242 rows containing non-finite values (`stat_density()`).
+## Warning: Removed 3242 rows containing non-finite outside the scale range
+## (`stat_density()`).
 ```
 
 <img src="06-hypothesis_testing_files/figure-html/unnamed-chunk-21-1.png" width="672" />
@@ -548,7 +551,8 @@ ggplot(BCS0708, aes(x = log10(ptcviolent))) +
 ```
 
 ```
-## Warning: Removed 3242 rows containing non-finite values (`stat_density()`).
+## Warning: Removed 3242 rows containing non-finite outside the scale range
+## (`stat_density()`).
 ```
 
 <img src="06-hypothesis_testing_files/figure-html/unnamed-chunk-22-1.png" width="672" />
@@ -576,7 +580,8 @@ ggplot(BCS0708, aes(x = bctcviolent)) +
 ```
 
 ```
-## Warning: Removed 3242 rows containing non-finite values (`stat_density()`).
+## Warning: Removed 3242 rows containing non-finite outside the scale range
+## (`stat_density()`).
 ```
 
 <img src="06-hypothesis_testing_files/figure-html/unnamed-chunk-24-1.png" width="672" />
@@ -636,8 +641,8 @@ t1waybt(tcviolent ~ ethgrp2, data = BCS0708, tr = .05, nboot = 599)
 ## 
 ## Test statistic: 45.3591 
 ## p-value: 0 
-## Variance explained: 0.083 
-## Effect size: 0.288
+## Variance explained: 0.078 
+## Effect size: 0.279
 ```
 
 As with the standard ANOVA and the Welch version, we still get a significant result.
@@ -765,7 +770,7 @@ ANOVA(tcviolent ~ ethgrp2, data = BCS0708, brief=TRUE)
 ## 
 ##                     df           Sum Sq        Mean Sq        F-value   p-value 
 ## ethgrp2              4   252.8306605538  63.2076651384 64.5427025753    0.0000 
-## Residuals         8428  8253.6705240244   0.9793154395 
+## Residuals         8428  8253.6705240245   0.9793154395 
 ## 
 ## R Squared: 0.030 
 ## R Sq Adjusted: 0.029 
